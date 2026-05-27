@@ -2,13 +2,76 @@
 // It can be loaded into index.html.
 // You should not need to modify it to complete the project.
 
+export function getUsers() {
+  const users = [
+    {
+      id: 101,
+      name: 'Alice Smith',
+      bookmarks: [
+        {
+          title: 'MDN Web Docs',
+          description: 'Excellent JS documentation',
+          createdAt: '2026-05-10'
+        },
+        {
+          title: 'CSS Tricks',
+          description: 'Great for layout tips',
+          createdAt: '2026-05-12'
+        }
+      ]
+    },
+    {
+      id: 102,
+      name: 'Bob Jones',
+      bookmarks: [
+        {
+          title: 'GitHub',
+          description: 'My repositories',
+          createdAt: '2026-04-20'
+        }
+      ]
+    },
+    { id: 103, name: 'Charlie Brown', bookmarks: [] },
+    {
+      id: 104,
+      name: 'Diana Prince',
+      bookmarks: [
+        {
+          title: 'StackOverflow',
+          description: 'Debugging help',
+          createdAt: '2026-05-25'
+        }
+      ]
+    },
+    {
+      id: 105,
+      name: 'Evan Wright',
+      bookmarks: [
+        {
+          title: 'Dev.to',
+          description: 'Developer community articles',
+          createdAt: '2026-05-01'
+        }
+      ]
+    }
+  ];
+  return users;
+}
+
 /**
  * Get a list of user ids
  *
  * @returns {string[]} List of user id strings
  */
 export function getUserIds() {
-  return ['1', '2', '3', '4', '5'];
+  // return ['1', '2', '3', '4', '5'];
+  const userIds = getUsers().map((user) => user.id.toString());
+  return userIds;
+}
+
+export function getUsersIdAndName() {
+  const users = getUsers();
+  return users.map((user) => ({ id: user.id, name: user.name }));
 }
 
 /**
