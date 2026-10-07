@@ -12,14 +12,46 @@ window.onload = function () {
     '#userCount'
   ).innerText = `There are ${users.length} users`;
 
-  const selectElement = document.querySelector('#userSelect');
-  users.forEach((user) => {
-    const option = document.createElement('option');
-    option.value = user.id;
-    option.text = `${user.name}`;
-    selectElement.appendChild(option);
-  });
+  // const selectElement = document.querySelector('#userSelect');
+  // users.forEach((user) => {
+  //   const option = document.createElement('option');
+  //   option.value = user.id;
+  //   option.text = `${user.name}`;
+  //   selectElement.appendChild(option);
+  // });
 
   const usersData = getUsers();
   console.log(usersData);
-};
+
+  const form = document.querySelector('.form-bookmark');
+
+
+  usersData.forEach((user) => {
+    console.log(user.id)
+  localStorage.setItem(user.id, JSON.stringify(usersData));
+  
+  });
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const title = document.querySelector('#title').value;
+    const url = document.querySelector('#url').value;
+    const description = document.querySelector('#description').value;
+
+    // usersData.forEach((element) => {
+    // //add the bookmark to the user with the selected id in local storage
+    
+    
+    // );
+
+    const userBookmarks = {
+      title,
+      url,
+      description,
+    }
+
+
+
+ }
+
