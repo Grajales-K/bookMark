@@ -10,6 +10,7 @@ export function getUsers() {
       bookmarks: [
         {
           title: 'MDN Web Docs',
+          url: 'https://developer.mozilla.org/en-US/',
           description: 'Excellent JS documentation',
           createdAt: '2026-05-10'
         },
@@ -26,6 +27,7 @@ export function getUsers() {
       bookmarks: [
         {
           title: 'GitHub',
+          url: 'https://www.w3schools.com/html/html_layout.asp',
           description: 'My repositories',
           createdAt: '2026-04-20'
         }
@@ -38,6 +40,7 @@ export function getUsers() {
       bookmarks: [
         {
           title: 'StackOverflow',
+          url: 'https://stackoverflow.com/',
           description: 'Debugging help',
           createdAt: '2026-05-25'
         }
@@ -49,6 +52,7 @@ export function getUsers() {
       bookmarks: [
         {
           title: 'Dev.to',
+          url: 'https://dev.to/',
           description: 'Developer community articles',
           createdAt: '2026-05-01'
         }
