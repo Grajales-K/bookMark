@@ -3,6 +3,7 @@
 
 <head>
     <script type="module" src="script.js"></script>
+    <link rel="stylesheet" href="bookmark.css">
 </head>
 
 <body>
@@ -12,15 +13,33 @@
     </header>
 
     <main>
-        <select id="userSelect" name="users">
+        <!-- <select id="userSelect" name="users">
             <option value="" disabled selected>Select User</option>
             <section id="userBookMarks">
-                
-        
             </section>
-        </select>
+
+        </select> -->
+
+        <form action="" method="get" class="form-bookmark">
+            <div class="form-bookmark">
+                <label for="title">Enter your Title: </label>
+                <input type="text" name="title" id="title" required />
+            </div>
+            <div class="form-bookmark">
+                <label for="url">Enter your url: </label>
+                <input type="url" name="url" id="url" required />
+            </div>
+            <div class="form-bookmark">
+                <label for="description">Enter brief description: </label>
+                <input type="text" name="description" id="description" required />
+            </div>
+            <div class="form-bookmark">
+                <input type="submit" value="Save Bookmark!" />
+            </div>
+        </form>
     </main>
 
+<script src=""></script>
 </body>
 
 </html>
